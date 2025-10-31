@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register - Talentshive Academy</title>
+  <style>
+    body {font-family: Arial, sans-serif; margin: 0; background: #afa5e4; color: #222;}
+    .container {max-width: 500px; margin: 40px auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);}
+    h1 {color: #0ea5a4; text-align: center; margin-bottom: 15px;}
+    input, select {width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 14px;}
+    button {background: #0ea5a4; color: #fff; border: none; padding: 10px; border-radius: 5px; width: 100%; cursor: pointer; font-weight: bold;}
+    button:hover {background: #0b8f8d;}
+    p {text-align: center; font-size: 14px;}
+    a {color: #0ea5a4; text-decoration: none;}
+  </style>
+</head>
+<body>
+  <!-- HEADER / NAV (brand left, nav right) -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(10,20,34,0.6); backdrop-filter:blur(6px); border-bottom:1px solid rgba(255,255,255,0.03);">
+    <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding:12px 18px; gap:12px;">
+      <!-- Brand -->
+      <div style="display:flex; align-items:center; gap:12px;">
+        <div aria-hidden="true" style="width:44px; height:44px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-weight:800; color:#021018; background:linear-gradient(135deg,#0ea5a3,#06b6d4); box-shadow:0 8px 24px rgba(6,182,179,0.12); font-size:18px;">T</div>
+        <div>
+          <div style="font-size:18px; font-weight:700; color:#fff; line-height:1;">Talentshive Academy</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.6); margin-top:2px;">Empowering Digital Skills</div>
+        </div>
+      </div>
+
+      <!-- Primary nav (hidden on small screens via JS when toggled) -->
+      <nav id="primaryNav" aria-label="Primary" style="display:flex; align-items:center; gap:10px;">
+        <a href="index.html" style="padding:8px 12px; border-radius:8px; color:#ffffff; font-weight:600; text-decoration:none;">Home</a>
+        <a href="about.html" style="padding:8px 12px; border-radius:8px; color:#ffffff; font-weight:600; text-decoration:none;">About</a>
+        <a href="courses.html" style="padding:8px 12px; border-radius:8px; color:#ffffff; font-weight:600; text-decoration:none;">Courses</a>
+        <a href="register.html" style="padding:8px 12px; border-radius:8px; color:#ffffff; font-weight:600; text-decoration:none;">Register</a>
+        <a href="contact.html" style="padding:8px 12px; border-radius:8px; color:#ffffff; font-weight:600; text-decoration:none;">Contact</a>
+    
+      </nav>
+
+      <!-- Mobile toggle -->
+      <button id="menuToggle" aria-controls="mobileMenu" aria-expanded="false" style="display:none; background:transparent; border:0; color:#cfeff0; font-size:22px;">☰</button>
+    </div>
+
+    <!-- Mobile menu (will be inserted by JS when small screen) -->
+    <div id="mobileMenu" aria-hidden="true" style="display:none; max-width:1200px; margin:0 auto; padding:10px 18px; background:rgba(6,14,24,0.6); border-top:1px solid rgba(255,255,255,0.02);">
+      <!-- mobile links appended by JS -->
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Register</h1>
+    <form action="register_user.php" method="post">
+      <input type="text" name="fullname" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <select name="course" required>
+        <option value="">Select Course</option>
+        <option value="web-dev">Web Development</option>
+        <option value="marketing">Digital Marketing</option>
+        <option value="design">Graphic Design</option>
+      </select>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Register</button>
+    </form>
+    <p>Already registered? <a href="login.html">Login</a></p>
+  </div>
+</body>
+</html>
